@@ -16,7 +16,6 @@ export async function revalidateAfterEditService(serviceLink) {
     revalidatePath(`/admin/content/services`);
     revalidatePath(`/services`);
     revalidatePath(`/home`);
-    revalidatePath(`/services/${serviceLink}`);
 }
 
 export async function revalidateAfterUploadService() {
