@@ -12,6 +12,9 @@ export async function GET(req, { params }) {
       select: 'link imageSquareLink imageCoverLink title index _id',
       options: { sort: { index: 1 } },
     });
+        if (!data) {
+        return res.status(404).json({ error: 'Service not found' });
+    }
 
     return NextResponse.json(data);
   } catch (error) {
